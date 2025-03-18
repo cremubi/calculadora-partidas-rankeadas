@@ -1,30 +1,30 @@
-let winsBalance = 0;
+let matchesWon = 0;
 let level = "";
 
-matchesBalance(100, 50);
-ranking(winsBalance);
+matchesBalance(100, 35);
+ranking(matchesWon);
 
-console.log(`O herói tem saldo de ${winsBalance} vitórias e, por isso, está no nível ${level}.`)
+console.log(`O herói tem saldo de ${matchesWon} vitórias e, por isso, está no nível ${level}.`)
 
 function matchesBalance(wins, losses){
-    winsBalance = wins - losses;
-    return winsBalance;
+    matchesWon = wins - losses;
+    return matchesWon;
 }
 
-function ranking(winsBalance){
-    if(winsBalance >= 0 && winsBalance < 11){
+function ranking(matchesWon){
+    if(matchesWon >= 0 && matchesWon < 11){
         level = "Ferro";
-    } else if(winsBalance > 10 && winsBalance <= 20){
+    } else if(matchesWon > 10 && matchesWon <= 20){
         level = "Bronze";
-    } else if(winsBalance > 20 && winsBalance <= 50){
+    } else if(matchesWon > 20 && matchesWon <= 50){
         level = "Prata";
-    } else if(winsBalance > 50 && winsBalance <= 80){
+    } else if(matchesWon > 50 && matchesWon <= 80){
         level = "Ouro";
-    } else if(winsBalance > 80 && winsBalance <= 90){
+    } else if(matchesWon > 80 && matchesWon <= 90){
         level = "Diamante";
-    } else if(winsBalance > 90 && winsBalance <= 100){
+    } else if(matchesWon > 90 && matchesWon <= 100){
         level = "Lendário";
-    } else if (winsBalance > 100){
+    } else if (matchesWon > 100){
         level = "Imortal";
     }
     return level;
